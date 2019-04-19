@@ -3,10 +3,6 @@ class QuotesController < ApplicationController
     @quote = Quote.all.sample
   end
 
-  def new
-    @quote = Quote.new
-  end
-
   def create
     @quote = Quote.create(quote_params)
     if @quote.invalid?
